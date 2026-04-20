@@ -1,5 +1,4 @@
 const express=require('express')//Express is a framework
-const cors=require('cors')
 const PORT=3000
 
 const app=express()
@@ -11,7 +10,7 @@ app.get('/',(req,res)=>
 
 app.get('/status',(req,res)=>
 {
-  res.json({message:'Hello from codesync'})
+  res.json({app:"CodeSync Arena",version:"1.0",online:"true"})
 })
 app.listen(PORT, () => {
     console.log("Server is running on port 3000");
